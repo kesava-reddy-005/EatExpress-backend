@@ -1,0 +1,26 @@
+{
+  "name": "backend_eat",
+  "version": "1.0.0",
+  "main": "index.js",
+    "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "mongoose": "^8.18.0",
+    "morgan": "^1.10.1",
+    "twilio": "^5.10.3",
+    "xss-clean": "^0.1.4"
+  }
+}
