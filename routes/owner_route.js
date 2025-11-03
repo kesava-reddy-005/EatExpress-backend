@@ -73,5 +73,25 @@ router.get("/owners", async (req, res) => {
   }
 });
 
+// ✅ Get Single Owner (for restaurant menu page)
+router.get("/:id", async (req, res) => {
+  try {
+    const owner = await Owner.findById(req.params.id);
+    if (!owner) {
+      return res.status(404).json({ message: "Restaurant not found!" });
+    }
+
+    res.json({
+      _id: owner._id,
+      name: owner.name,
+      restaurantName: owner.restaurantName,
+      email: owner.email,
+      mobile_no: owner.mobile_no,
+      adders: owner.adders,
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch restaurant details" });
+  }
+});
 
 module.exports = router;
